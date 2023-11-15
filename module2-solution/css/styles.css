@@ -1,0 +1,58 @@
+/* Global styles */
+body {
+  background-color: #f5f5dc; /* Beige background for the body */
+  font-family: Arial, sans-serif; /* Optional: Set a default font for the page */
+}
+
+/* Container for sections */
+.container {
+  width: 100%;
+}
+
+/* Section styles */
+.section {
+  float: left;
+  width: 33.33%; /* Each section takes up one-third of the width */
+  box-sizing: border-box; /* Include padding and borders in the element's total width */
+  padding: 20px; /* Space inside sections */
+  border: 1px solid black; /* Black border around each section */
+  background-color: #e8e8e8; /* Light grey background for the sections */
+  margin: 10px 0; /* Optional: Add vertical space between sections */
+  position: relative; /* For absolute positioning of section-title */
+}
+
+/* Section title styles */
+.section-title {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #6a5acd; /* Slate blue background for the titles */
+  color: #ffffff; /* White text color for the titles */
+  padding: 5px;
+  border: 1px solid black; /* Black border around the title */
+}
+
+/* Clearfix for floated elements */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Tablet view styles */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    width: 50%; /* First two sections will take half the width each */
+  }
+  .section:last-child {
+    width: 100%; /* Third section takes full width */
+    clear: both; /* Clear the float */
+  }
+}
+
+/* Mobile view styles */
+@media (max-width: 767px) {
+  .section {
+    width: 100%; /* Each section takes full width on mobile */
+  }
+}
